@@ -3,7 +3,7 @@ package _03_polymorphs;
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class FollowMorph extends Polymorph {
+public class FollowMorph extends Polymorph  {
 	FollowMorph(int x, int y, int width, int height) {
 		super(x, y, width, height);
 	}
@@ -17,4 +17,7 @@ public class FollowMorph extends Polymorph {
 	public void update() {
 		
 	}
+
+	
+
 }

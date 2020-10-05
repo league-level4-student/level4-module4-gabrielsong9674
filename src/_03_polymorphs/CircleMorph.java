@@ -15,12 +15,9 @@ public class CircleMorph extends Polymorph{
 	}
 	
 	public void update() {
-		double angle = 0.0;
-		//while(angle < 760) {
-		setX((int) (getX() + Math.cos(angle) * 50));
-		
-		setY((int) (getY() + Math.sin(angle) * 50));
-		angle += 0.1;
-		//}
+		double angle = 0;
+		setX((int) (50 + Math.cos(angle) * 50));
+		setY((int) (50 + Math.sin(angle) * 50));
+		angle++;
 	}
 }
