@@ -5,9 +5,10 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
+
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -40,17 +41,24 @@ public class PolymorphWindow extends JPanel implements ActionListener{
    	 
    	 Polymorph movingMorph = new MovingMorph(10, 50, 50, 50);
    	 
-   	 Polymorph circleMorph = new CircleMorph(100, 300, 20, 20);
+   	 Polymorph circleMorph = new CircleMorph(200, 350, 20, 20);
 
    	 Polymorph messageMorph = new MessageMorph(40, 40, 60, 300);
    	 
+   	 Polymorph followMorph = new FollowMorph(200, 200, 10, 10);
+   	 
+   	 Polymorph imageMorph = new ImageMorph(350, 375, 100, 100);
+
    	 window.addMouseListener((MouseListener) messageMorph);
+   	 window.addMouseMotionListener((MouseMotionListener) followMorph);
 
    	 polyList.add(bluePoly);
    	 polyList.add(redMorph);
    	 polyList.add(movingMorph);
    	 polyList.add(circleMorph);
    	 polyList.add(messageMorph);
+   	 polyList.add(followMorph);
+   	 polyList.add(imageMorph);
    	 
    	 timer = new Timer(1000 / 30, this);
    	 timer.start();

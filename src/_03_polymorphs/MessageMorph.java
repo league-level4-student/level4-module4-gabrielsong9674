@@ -24,7 +24,7 @@ public class MessageMorph extends Polymorph implements MouseListener{
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+	
 	}
 
 	@Override
@@ -42,7 +42,6 @@ public class MessageMorph extends Polymorph implements MouseListener{
 	@Override
 	public void mouseEntered(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
