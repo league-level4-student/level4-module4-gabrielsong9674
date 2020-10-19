@@ -66,7 +66,7 @@ public class HospitalTest extends TestCase {
 		testPatient.checkPulse();
 		assertEquals(true, testPatient.feelsCaredFor());
 	}
-/*
+
 	// Doctors work on their Patients by checking their pulses. 
 	public void testDoctorsWork() throws Exception {
 		Doctor testDoctor = new GeneralPractitioner();
@@ -90,16 +90,24 @@ public class HospitalTest extends TestCase {
 		try {
 			testDoctor.assignPatient(new Patient());
 			assertTrue(false);
+			
 		} catch (DoctorFullException dfe) {
 			assertTrue(true);
+
 		}
 assertTrue(testDoctor.getPatients().size() == 3);
+
 	}
 
 	public void test8Patients() throws Exception {
 		// TODO: add 3 doctors to hospital
-
+		for(int i = 0; i < 3; i ++) {
+			testHospital.addDoctor(new Doctor());
+		}
 		// TODO: add 8 patients to hospital
+		for(int i = 0; i < 8; i ++) {
+			testHospital.addPatient(new Patient());
+		}
 
 		// hospital assigns patients to doctors
 		testHospital.assignPatientsToDoctors();
@@ -111,5 +119,5 @@ assertTrue(testDoctor.getPatients().size() == 3);
 	}
 
 
-*/
+
 }

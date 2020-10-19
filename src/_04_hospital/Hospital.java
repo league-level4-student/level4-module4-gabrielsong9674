@@ -24,4 +24,10 @@ public class Hospital {
 	public ArrayList<Patient> getPatients(){
 		return patients;
 	}
+
+	public void assignPatientsToDoctors() {
+		for(Doctor doctor : doctors) {
+			
+		}
+	}
 }

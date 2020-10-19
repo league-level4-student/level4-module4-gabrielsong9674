@@ -10,4 +10,10 @@ public class GeneralPractitioner extends Doctor{
 		
 		return true;
 	}
+	public void doMedicine() {
+		for (Patient patient : assignedPatients) {
+			patient.checkPulse();
+			patient.feelsCaredFor();
+		}
+	}
 }

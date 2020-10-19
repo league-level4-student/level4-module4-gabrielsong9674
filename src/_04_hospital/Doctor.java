@@ -14,11 +14,24 @@ public class Doctor {
 	}
 	
 	ArrayList<Patient> assignedPatients = new ArrayList<Patient>();
-	public void assignPatient(Patient patient) {
-		assignedPatients.add(patient);
+	public void assignPatient(Patient patient) throws DoctorFullException{
+		if(assignedPatients.size() >= 3) {
+			throw new DoctorFullException();
+		}
+		else {
+			assignedPatients.add(patient);
+		}
+
 	}
 	
 	public ArrayList<Patient> getPatients(){
 		return assignedPatients;
+	}
+	
+	public void doMedicine() {
+		for (Patient patient : assignedPatients) {
+			patient.checkPulse();
+			patient.feelsCaredFor();
+		}
 	}
 }
